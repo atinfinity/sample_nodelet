@@ -5,7 +5,6 @@
  *      Author: cryborg21
  */
 #include "sample_nodelet_class2.h"
-#include <nodelet/nodelet.h>
 #include <pluginlib/class_list_macros.h>
 
 namespace sample_nodelet_ns

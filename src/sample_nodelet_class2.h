@@ -6,6 +6,7 @@
  */
 #ifndef SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS2_H_
 #define SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS2_H_
+#include <ros/ros.h>
 #include <nodelet/nodelet.h>
 
 namespace sample_nodelet_ns
