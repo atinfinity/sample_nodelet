@@ -12,12 +12,12 @@ namespace sample_nodelet_ns
 {
 SampleNodeletClass2::SampleNodeletClass2()
 {
-  ROS_INFO("SampleNodeletClass2 Constructor");
+    ROS_INFO("SampleNodeletClass2 Constructor");
 }
 
 SampleNodeletClass2::~SampleNodeletClass2()
 {
-  ROS_INFO("SampleNodeletClass2 Destructor");
+    ROS_INFO("SampleNodeletClass2 Destructor");
 }
 
 void SampleNodeletClass2::onInit()
