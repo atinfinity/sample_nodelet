@@ -1,8 +1,8 @@
 /*
  * sample_nodelet_class2.cpp
  *
- *  Created on: 2016/09/18
- *      Author: cryborg21
+ *  Created on: 2016/10/30
+ *      Author: dandelion1124
  */
 #include "sample_nodelet_class2.h"
 #include <pluginlib/class_list_macros.h>

@@ -1,8 +1,8 @@
 /*
  * sample_nodelet_class.h
  *
- *  Created on: 2016/09/18
- *      Author: cryborg21
+ *  Created on: 2016/10/30
+ *      Author: dandelion1124
  */
 #ifndef SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS_H_
 #define SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS_H_

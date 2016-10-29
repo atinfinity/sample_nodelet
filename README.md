@@ -34,5 +34,5 @@ Simple example of ROS nodelet.
 
 ## Author
 
-[@cryborg21](https://github.com/cryborg21)  
-Copyright (c) 2016 @cryborg21
+[@dandelion1124](https://github.com/atinfinity)
+Copyright (c) 2016 @dandelion1124
