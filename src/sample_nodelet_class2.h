@@ -7,6 +7,7 @@
 #ifndef SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS2_H_
 #define SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS2_H_
 #include <ros/ros.h>
+#include <std_msgs/String.h>
 #include <nodelet/nodelet.h>
 
 namespace sample_nodelet_ns
@@ -18,6 +19,12 @@ public:
     ~SampleNodeletClass2();
 
     virtual void onInit();
+
+private:
+    void messageCb(const std_msgs::StringConstPtr& msg);
+
+    ros::NodeHandle nh;
+    ros::Subscriber sub;
 };
 } // namespace sample_nodelet_ns
 
