@@ -21,13 +21,19 @@ SampleNodeletClass::~SampleNodeletClass()
 
 void SampleNodeletClass::onInit()
 {
-    nh = getNodeHandle();
+    nh    = getNodeHandle();
     timer = nh.createTimer(ros::Duration(1.0), boost::bind(&SampleNodeletClass::timerCb, this));
+    pub   = nh.advertise<std_msgs::String>("message", 100);
+
     NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
 }
 
 void SampleNodeletClass::timerCb()
 {
+    std_msgs::String msg;
+    msg.data = std::string("message_test");
+    pub.publish(msg);
+
     NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
 }
 } // namespace sample_nodelet_ns

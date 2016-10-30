@@ -7,6 +7,7 @@
 #ifndef SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS_H_
 #define SAMPLE_NODELET_CLASS_SRC_SAMPLE_NODELET_CLASS_H_
 #include <ros/ros.h>
+#include <std_msgs/String.h>
 #include <nodelet/nodelet.h>
 
 namespace sample_nodelet_ns
@@ -24,6 +25,7 @@ private:
 
     ros::NodeHandle nh;
     ros::Timer timer;
+    ros::Publisher pub;
 };
 } // namespace sample_nodelet_ns
 
