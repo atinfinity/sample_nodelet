@@ -18,6 +18,12 @@ public:
     ~SampleNodeletClass();
 
     virtual void onInit();
+
+private:
+    void timerCb();
+
+    ros::NodeHandle nh;
+    ros::Timer timer;
 };
 } // namespace sample_nodelet_ns
 
