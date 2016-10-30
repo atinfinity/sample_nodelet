@@ -22,7 +22,7 @@ SampleNodeletClass::~SampleNodeletClass()
 void SampleNodeletClass::onInit()
 {
     nh = getNodeHandle();
-    timer = nh.createTimer(ros::Duration(10.0), boost::bind(&SampleNodeletClass::timerCb, this));
+    timer = nh.createTimer(ros::Duration(1.0), boost::bind(&SampleNodeletClass::timerCb, this));
     NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
 }
 
