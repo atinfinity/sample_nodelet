@@ -37,11 +37,18 @@ include_directories(
 )
 
 ## Declare a C++ library
+add_executable(input_node 
+  src/input_node.cpp
+)
+target_link_libraries(input_node ${catkin_LIBRARIES})
+
 add_library(sample_nodelet
   src/sample_nodelet_class.cpp
   src/sample_nodelet_class2.cpp
 )
 target_link_libraries(sample_nodelet ${catkin_LIBRARIES})
+
 if(catkin_EXPORTED_LIBRARIES)
   add_dependencies(sample_nodelet ${catkin_EXPORTED_LIBRARIES})
+  add_dependencies(input_node ${catkin_EXPORTED_LIBRARIES})
 endif()
