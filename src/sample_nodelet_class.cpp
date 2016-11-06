@@ -24,6 +24,7 @@ void SampleNodeletClass::onInit()
     nh    = getNodeHandle();
     timer = nh.createTimer(ros::Duration(1.0), boost::bind(&SampleNodeletClass::timerCb, this));
     pub   = nh.advertise<std_msgs::String>("message", 100);
+    sub   = nh.subscribe("input_message", 100, &SampleNodeletClass::messageCb, this);
 
     NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
 }
@@ -34,6 +35,11 @@ void SampleNodeletClass::timerCb()
     msg.data = std::string("message_test");
     pub.publish(msg);
 
+    NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
+}
+
+void SampleNodeletClass::messageCb(const std_msgs::StringConstPtr& msg)
+{
     NODELET_INFO("SampleNodeletClass - %s", __FUNCTION__);
 }
 } // namespace sample_nodelet_ns

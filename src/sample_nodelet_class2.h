@@ -24,6 +24,7 @@ private:
     void messageCb(const std_msgs::StringConstPtr& msg);
 
     ros::NodeHandle nh;
+    ros::Publisher pub;
     ros::Subscriber sub;
 };
 } // namespace sample_nodelet_ns

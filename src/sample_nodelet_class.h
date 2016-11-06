@@ -22,10 +22,12 @@ public:
 
 private:
     void timerCb();
+    void messageCb(const std_msgs::StringConstPtr& msg);
 
     ros::NodeHandle nh;
     ros::Timer timer;
     ros::Publisher pub;
+    ros::Subscriber sub;
 };
 } // namespace sample_nodelet_ns
 
