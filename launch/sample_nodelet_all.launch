@@ -4,7 +4,6 @@
 
     <!-- $ rosrun nodelet nodelet load sample_nodelet/SampleNodeletClass sample_nodelet_manager __name:=SampleNodeletClass_loader-->
     <node pkg="nodelet" type="nodelet" args="load sample_nodelet/SampleNodeletClass sample_nodelet_manager" name="SampleNodeletClass_loader" output="screen" />
-    </node>
 
     <!-- $ rosrun nodelet nodelet load sample_nodelet/SampleNodeletClass2 sample_nodelet_manager __name:=SampleNodeletClass_loader-->
     <node pkg="nodelet" type="nodelet" args="load sample_nodelet/SampleNodeletClass2 sample_nodelet_manager" name="SampleNodeletClass2_loader" output="screen" />
