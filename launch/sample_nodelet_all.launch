@@ -1,5 +1,6 @@
 <launch>
     <node pkg="sample_nodelet" type="input_node" name="input_node" output="screen" />
+    <node pkg="sample_nodelet" type="output_node" name="output_node" output="screen" />
 
     <!-- $ rosrun nodelet nodelet manager __name:=sample_nodelet_manager -->
     <node pkg="nodelet" type="nodelet" args="manager" name="sample_nodelet_manager" output="screen" />

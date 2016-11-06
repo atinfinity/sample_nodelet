@@ -42,6 +42,11 @@ add_executable(input_node
 )
 target_link_libraries(input_node ${catkin_LIBRARIES})
 
+add_executable(output_node 
+  src/output_node.cpp
+)
+target_link_libraries(output_node ${catkin_LIBRARIES})
+
 add_library(sample_nodelet
   src/sample_nodelet_class.cpp
   src/sample_nodelet_class2.cpp
@@ -49,6 +54,7 @@ add_library(sample_nodelet
 target_link_libraries(sample_nodelet ${catkin_LIBRARIES})
 
 if(catkin_EXPORTED_LIBRARIES)
-  add_dependencies(sample_nodelet ${catkin_EXPORTED_LIBRARIES})
   add_dependencies(input_node ${catkin_EXPORTED_LIBRARIES})
+  add_dependencies(output_node ${catkin_EXPORTED_LIBRARIES})
+  add_dependencies(sample_nodelet ${catkin_EXPORTED_LIBRARIES})
 endif()

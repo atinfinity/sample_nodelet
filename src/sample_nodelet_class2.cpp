@@ -22,6 +22,7 @@ SampleNodeletClass2::~SampleNodeletClass2()
 void SampleNodeletClass2::onInit()
 {
     nh  = getNodeHandle();
+    pub = nh.advertise<std_msgs::String>("output_message", 100);
     sub = nh.subscribe("message", 100, &SampleNodeletClass2::messageCb, this);
 
     NODELET_INFO("SampleNodeletClass2 - %s", __FUNCTION__);
@@ -29,6 +30,8 @@ void SampleNodeletClass2::onInit()
 
 void SampleNodeletClass2::messageCb(const std_msgs::StringConstPtr& msg)
 {
+    std_msgs::String msg2;
+    pub.publish(msg2);
     NODELET_INFO("SampleNodeletClass2 - %s", __FUNCTION__);
 }
 } // namespace sample_nodelet_ns
